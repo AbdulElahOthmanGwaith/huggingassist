@@ -52,6 +52,8 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.Toast;
 
+import org.woheller69.freeDroidWarn.FreeDroidWarn;
+
 import java.util.ArrayList;
 
 public class MainActivity extends Activity {
@@ -219,6 +221,7 @@ public class MainActivity extends Activity {
 
         //Load HuggingChat
         chatWebView.loadUrl(urlToLoad);
+        FreeDroidWarn.showWarningOnUpgrade(this, BuildConfig.VERSION_CODE);
         if (GithubStar.shouldShowStarDialog(this)) GithubStar.starDialog(this,"https://github.com/woheller69/huggingassist");
     }
 
@@ -264,8 +267,7 @@ public class MainActivity extends Activity {
     private static void initURLs() {
         //Allowed Domains
         allowedDomains.add("huggingface.co");
-        allowedDomains.add("huggingface.co.");
-        allowedDomains.add("pollinations.ai");
+        allowedDomains.add("token.awswaf.com");
     }
 
 

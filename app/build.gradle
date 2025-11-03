@@ -3,14 +3,15 @@ plugins {
 }
 
 android {
-    compileSdk 34
-
+    compileSdk 35
+    namespace 'org.woheller69.huggingchat'
+    android.buildFeatures.buildConfig true
     defaultConfig {
         applicationId "org.woheller69.hugassist"
         minSdk 21
-        targetSdk 34
-        versionCode 22
-        versionName "2.2"
+        targetSdk 35
+        versionCode 23
+        versionName "2.3"
     }
 
     buildTypes {
@@ -26,5 +27,5 @@ android {
 }
 
 dependencies {
-
+    implementation 'com.github.woheller69:FreeDroidWarn:V1.6'
 }

@@ -1,0 +1,2 @@
+Adapt for "new" HuggingChat
+SDK 35 / Android 15
